@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>document</title>
+</head>
+<body>
+    <p>a = 1</p>
+    <p>b = 2</p>
+    <p>a + b = ?</p>
+    <p id="name"></p>
+    <button onclick="mysum()">结果</button>
+</body>
+</html>
+<script>
+    //算数运算符 + ，- ，/ ，* ，++ ，-- ，%
+    //赋值运算符 = ，+= ，-=  ，/=  ，*= ，%=
+    //比较运算符 ==， === ，!= ，!== ，> ，< ，>=， <= (返回true 或者 false)
+    //逻辑运算符 &&(与) ||(或) !(非)(取反)
+    
+    //条件运算符
+    //例如: a>10? 
+    //var a = 10;     条件  如果满足条件就输出?后面的  不满足则输出:后面的
+    //doucument.write(a>10?"a大于10":"a小于10")；
+
+    function mysum(){
+        var a =10;
+        var b =a--;
+        document.getElementById("name").innerHTML=b;
+    }
+</script>
