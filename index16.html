@@ -11,14 +11,10 @@
 </body>
 </html>
 <script>
-    /*function 函数名(){
-        函数体;(代码块)
-    }*/
-    function jf(){
-        var a = 1;
-        var b = 2;
-        var c = a+b;
-        alert(c);
+    //全局变量和局部变量
+    var a = 10; b = 20; //全局变量 任何地方都能使用
+    function text(){
+        var c = 30; //局部变量 只能在当前函数使用
+        x = 10;  //全局变量 当函数被调用时为全局变量
     }
-    jf();
 </script>
