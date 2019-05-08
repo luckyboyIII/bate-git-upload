@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>err</title>
+</head>
+<body>
+    <input id = "txt" type = "text">
+    <input id = "btn" type = "button" onclick="text()" value="按钮">
+</body>
+</html>
+<script>
+    /*异常捕获 try catch 语句
+    try{
+        发生异常的代码块;
+    }catch(){
+        错误信息处理;
+    }
+    function text(){
+        try{
+            alert(xxx);    //异常的代码
+        }catch (err){
+            alert(err);    //弹出错误的信息
+        }       
+    }
+    text();*/
+
+    //throw语句 自定义创建一个错误
+    function text(){
+        var a =document.getElementById("txt").value;
+        try{
+            if(a==""){
+                alert('请输入');
+            }
+        }catch (err){
+            alert(err);        
+        }
+    }
+</script>
