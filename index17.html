@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>event</title>
+</head>
+<body>
+    <!--
+        onClick 鼠标单击事件  onMouseOver 鼠标经过事件  onMouseOut 鼠标移出事件
+        onChange 文本内容改变事件 onSelect 文本框选中事件 onFouse 光标聚集事件
+        onBlur 移开光标事件 onLoad 网页加载事件 onUnload 关闭网页事件
+    -->
+    <button onclick="mouseClick()">按钮</button>
+    <link rel="stylesheet"  href="style.css"> <!--引入style文件-->
+    <div class="div" onmouseover="over(this)" onmouseout="out(this)"></div>
+    <form> <!--表单-->
+        <input type="text" onchange="alert('neirong')">  <!--文本内容改变事件-->
+                           <!--文本框选中事件        光标聚集事件-->
+        <input type="text" onselect="textselect(this)" onfocus="onFouse(this)" onblur="blurOut(this)">
+    </form>
+</body>
+</html>
+<script>
+    //鼠标单击事件 函数(参数)
+    function mouseClick(){
+        alert('success');
+    }
+    //鼠标经过事件 
+    function over(c){
+        c.innerHTML = 'hello';
+    }   
+    //鼠标移出事件
+    function out(d){
+        d.innerHTML = 'world';
+    }  
+    //文本框选中事件 
+    function textselect(bg){
+        bg.style.background = "red";
+    } 
+    //光标聚集事件
+    function onFouse(bg1){
+        bg1.style.background = "yellow";
+    }
+    //移开光标事件
+    function blurOut(bg2){
+        bg2.style.background = "blue";
+    }
+</script>
