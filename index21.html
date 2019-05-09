@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang  "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content = "ie = edge">
+    <title>jubing</title>
+</head>
+<body>
+    <button id = "btn">按钮</button>
+    <p id = "pid"></p>
+    <p id = "pid1"></p>
+</body>
+</html>
+<script>
+    var a = document.getElementById("btn");
+    //                  (事件)  (参数)
+    a.addEventListener("click",hello); //像制定元素添加事件句柄
+    a.addEventListener("click",world);
+    a.removeEventListener("click",hello); //移除句柄
+    a.removeEventListener("click",world);
+    function hello(){
+        alert("hello");
+    }
+    function world(){
+        alert("world");
+    }
+</script>
