@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+<body>
+    <!--href 链接-->
+    <!--<img id="tpid" src="图片">-->
+    <a id="wyid" href="http://www.baidu.com">baidu</a>
+    <!--<p id="pid">Hello</p>-->
+    <button onclick="demo()">按钮</button>
+</body>
+</html>
+<script>
+    //innerHTML 改变HTML内容
+    function demo(){
+        document.getElementById("wyid").innerHTML = "7k7k";
+        document.getElementById("wyid").href = "http://www.7k7k.com";
+      //document.getElementsByTagName("a"); //相同元素中的第一个
+    }
+  //改变图片属性
+  //function img(){
+      //document.getElementById("tpid").src = "改变的图片";
+  //}
+</script>
