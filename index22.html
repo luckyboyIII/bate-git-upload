@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang  "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content = "ie = edge">
+    <title>event</title>
+</head>
+<body>
+    <div id = "div">
+    <a id = "aid" href="http://www.baidu.com">百度</a>
+    <button id = "btn">按钮</button>
+    </div>
+</body>
+</html>
+<script>
+    //事件对象event：
+    //    1)：type：获取事件类型
+    //    2)：target：获取事件目标
+    //    3)：stopPropagation()：阻止事件冒泡
+    //    4)：preventDefault()：阻止事件默认行为
+
+    document.getElementById("btn").addEventListener("click",showType);
+    document.getElementById("div").addEventListener("click",showDiv);
+    document.getElementById("aid").addEventListener("click",showA);
+    function showType(event){
+        alert(event.type);       //获取事件类型
+        alert(event.target);     //获取事件目标
+        event.stopPropagation(); //阻止事件冒泡
+    }
+    //事件冒泡
+    function showDiv(){
+        alert("div");
+    }
+    
+    function showA(event){
+        event.stopPropagation();
+        event.preventDefault(); //阻止事件默认行为
+    }
+</script>
